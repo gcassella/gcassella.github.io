@@ -33,11 +33,11 @@ jobs:
           git submodule init
           git submodule update --remote --recursive
       - name: wasm-pack build
-        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
-             cd wasm-game-of-life
-             wasm-pack build --target web
-             cd ../learning-webgpu
-             wasm-pack build --target web
+      - run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+      - run: cd wasm-game-of-life
+      - run: wasm-pack build --target web
+      - run: cd ../learning-webgpu
+      - run: wasm-pack build --target web
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
