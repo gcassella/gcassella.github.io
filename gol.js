@@ -1,4 +1,4 @@
-import init, {Universe} from "./wasm_game_of_life.js";
+import init, {Universe} from "./wasm-game-of-life/pkg/wasm_game_of_life.js";
 
 const wasm = await init();
 const memory = wasm.memory;

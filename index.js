@@ -1,4 +1,4 @@
-import init, { run } from "./learn_wgpu.js";
+import init, { run } from "./learning-webgpu/pkg/learn_wgpu.js";
 
 console.log("Initializing");
 await init();

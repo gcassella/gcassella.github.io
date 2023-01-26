@@ -1,0 +1,6 @@
+[submodule "wasm-game-of-life"]
+	path = wasm-game-of-life
+	url = https://github.com/gcassella/wasm-game-of-life
+[submodule "learning-webgpu"]
+	path = learning-webgpu
+	url = https://github.com/gcassella/learning-webgpu
