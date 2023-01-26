@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello wasm-pack!</title>
+    <style>
+      body {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        overflow: hidden; /* Hide scrollbars */
+      }
+
+      #fps {
+        white-space: pre;
+        font-family: monospace;
+        color: azure;
+        z-index: 1;
+      }
+
+      label {
+        white-space: pre;
+        font-family: monospace;
+        color: azure;
+        z-index: 1;
+      }
+
+      #spawnable {
+        z-index: 1;
+      }
+
+      #buttons {
+        z-index: 1;
+      }
+
+      #grid-toggle {
+        z-index: 1;
+      }
+
+      #game-of-life-canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+  <div id="buttons">
+    <button id="play-pause" oncontextmenu="event.preventDefault();"></button>
+    <button id="clear" oncontextmenu="event.preventDefault();">❌</button>
+  </div>
+
+
+  <label>Toggle Grid<input type="checkbox" id="grid-toggle"></label>
+  <label>FPS Limiter (0 for no limit)<input id="fps-limiter" type="number" min="0" max="160" value="60"></label>
+  <div id="fps"></div>
+  <select id="spawnable"></select>
+  <canvas id="game-of-life-canvas" oncontextmenu="event.preventDefault();"></canvas>
+  <script src="./bootstrap.js"></script>
+  </body>
+</html>
